@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*a:visited{*/
+    /*color:#cccccc;*/
+/*}*/
+        .top{
+            position: absolute;
+            top: 23px;
+            right: 95px;
+        }
+        .top ul{
+            float: right;
+            list-style: none;
+
+        }
+        .top ul li{
+            float: left;
+            margin-left: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+.top a:link{
+    color:#333;
+}
+.top a:visited{
+    color: #333;
+}
+
+
+        .more{
+            display:block;
+            width:86px;
+            position: absolute;
+            top: 20px;
+            right: 0;
+
+        }
+        .bdmore{
+            width: 60px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 13px;
+            color: #fff;
+            margin-left: 14px;
+            background-color: #3385ff;
+            display: block;
+
+
+
+        }
+.search{
+    width: 640px;
+    height: 144px;
+
+    position: absolute;
+    top: 85px;
+    left: 250px;
+}
+        .search img{
+    display: block;
+            margin:0 auto   ;
+        }
+        .searchbox{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 640px;
+        }
+        .searchbox input{
+            width: 540px;
+            height: 34px;
+            position: relative;
+        }
+        .searchbox span{
+            background-color: #3385ff;
+            height: 38px;
+            width:100px;
+            display:block;
+            text-align: center;
+            line-height: 38px;
+            font-size:15px ;
+            color:#ffffff;
+            position: absolute;
+            right: -2px;
+            bottom: 0;
+        }
+        .footer{
+            position:absolute;
+            bottom: 38px;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            font-size: 12px;
+            font-family: Arial;
+            color: #999;
+
+        }
+
+
+
+        .hidden{
+            display: none;
+
+        }
+        .hidden ul{
+            list-style: none;
+        }
+.son{
+    width: 80px;
+    height: 80px;
+    /*justify-content: center;*/
+    border-bottom: 1px solid #ccc;
+    /*align-items:center;*/
+    /*display: flex;*/
+    position: relative;
+    cursor: pointer;
+
+
+}
+        .son span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 36px;
+            height: 36px;
+            display: block;
+
+        }
+        .bg7{
+            background:url("222.png") center no-repeat;
+            background-position: 0 0;
+        }
+.bg1{
+    background:url("222.png") center no-repeat;
+    background-position: -75px 0;
+}
+        .bg2{
+            background:url("222.png") center no-repeat;
+            background-position: -111px 0;
+        }
+.bg3{
+    background:url("222.png") center no-repeat;
+    background-position: -36px 0;
+}
+.bg4{
+    background:url("222.png") center no-repeat;
+    background-position: -184px 0;
+}
+.bg5{
+    background:url("222.png") center no-repeat;
+    background-position: -146px 0;
+}
+
+.son a {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    font-size: 10px;
+    text-decoration: none;
+}
+        .son:hover a{
+            text-decoration: underline;
+        }
+        .qrcode{
+            background:url("333png.png") center no-repeat;
+            width: 60px;
+            height: 60px;
+            display: block;
+            position: absolute;
+            bottom:45px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .qrcode span{
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .footerp1{
+            text-align: center;
+
+
+        }
+        .footerp1 a{
+            margin-left: 26px;
+
+        }
+
+        .footerp2{
+            margin-top: 8px;
+        }
+        .footerp2 a{
+            margin-left: 5px;
+
+        }
+.footer a:link{
+    color:#999;
+}
+.footer a:visited{
+    color: #999;
+}
+.setting ul{
+    width: 70px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    top: 24px;
+    right: -24px;
+    border: 1px solid #999;
+
+}
+        .setting ul li{
+            float: right;
+            width: 70px;
+            height:15px;
+            font-size: 12px;
+            color:#333;
+            margin-top:10px ;
+            line-height: 15px;
+
+
+            /*cursor: none;*/
+        }
+        .setting1{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="top">
+    <ul>
+        <li><a href="">新闻</a></li>
+        <li><a href="">hao123</a></li>
+        <li><a href="">地图</a></li>
+        <li><a href="">视频</a></li>
+        <li><a href="">贴吧</a></li>
+        <li><a href="">学术</a></li>
+        <li><a href="" class="login">登陆</a></li>
+        <li>
+            <a href="" class="login setting" id="login">设置
+            <ul  class ="setting1"  id="setting">
+                <li>搜索设置</li>
+                <li>高级设置</li>
+                <li>关闭预测</li>
+                <li>隐私设置</li>
+            </ul>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="more" class= "more"> <span class="bdmore">更多产品</span>
+    <div id="hidden" class="hidden">
+        <ul>
+            <li class ="son ">
+                <span class="bg7"></span>
+                <a href="http://www.baidu.com">糯米</a>
+            </li>
+            <li class ="son "><span class="bg1" ></span><a href="">音乐</a></li>
+            <li class ="son "><span class="bg2"></span><a href="">图片</a></li>
+            <li class ="son "><span class="bg3"></span><a href="">知道</a></li>
+            <li class ="son "><span class="bg4"></span><a href="">风云榜</a></li>
+            <li class ="son "><span class="bg5"></span><a href="">文库</a></li>
+            <li class ="son "><span class="bg6"></span><a href="">全部产品</a></li>
+        </ul>
+    </div>
+</div>
+<div class="search">
+    <a href=""><img src="1111.png" alt=""></a>
+    <div class="searchbox">
+        <input type="text"><span>百度一下</span>
+    </div>
+</div>
+<div class="footer">
+    <div class="qrcode"><span>百度</span></div>
+    <p class="footerp1">
+        <a href="">把百度设为首页</a>
+        <a href="">关于百度</a>
+        <a href="">About Baidu</a>
+        <a href="">百度推广</a>
+    </p>
+    <p class="footerp2">
+        <span>©2018 Baidu</span>
+        <a href="">使用百度前必读</a>
+        <a href="">意见反馈</a><span>京ICP证030173号</span>
+        <a href="">京公网安备11000002000001号</a>
+    </p>
+</div>
+<script>
+
+    var moreObj =document.getElementById('more')
+       moreObj.onmouseover=function () {
+          document.getElementById("hidden").style.display="block"
+    }
+    moreObj.onmouseout=function () {
+        document.getElementById("hidden").style.display="none"
+
+       }
+    var login =document.getElementById('login')
+    login.onmouseover=function () {
+        document.getElementById("setting").style.display="block"
+    }
+    login.onmouseout=function () {
+        document.getElementById("setting").style.display="none"
+
+    }
+
+</script>
+</body>
+</html>
